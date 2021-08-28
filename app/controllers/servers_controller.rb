@@ -30,10 +30,6 @@ class ServersController < ApplicationController
     @server.update(params)
   end
 
-  def recent
-    @server = Server.all.last
-  end
-
   def destroy
     @server.destroy
   end
