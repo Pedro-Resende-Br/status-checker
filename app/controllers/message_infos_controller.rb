@@ -16,8 +16,8 @@ class MessageInfosController < ApplicationController
 
   def create
     @message_info = MessageInfo.new(params)
-    if @messafe_info[:status] == "UP" || @messafe_info[:status] == "DOWN"
-      @messafe_info.save
+    if @message_info[:status] == "UP" || @message_info[:status] == "DOWN"
+      @message_info.save
     else
       render :new
     end
@@ -37,7 +37,7 @@ class MessageInfosController < ApplicationController
   
   private
 
-  def message_info
+  def set_message_info
     @message_info = MessageInfo.find(params[:id])
   end
 
