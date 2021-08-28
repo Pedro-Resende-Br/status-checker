@@ -1,3 +1,3 @@
 class MessageInfo < ApplicationRecord
-  validate :status, uniqueness: true
+  validates :status, uniqueness: true
 end
