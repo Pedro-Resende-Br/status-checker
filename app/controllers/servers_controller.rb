@@ -40,7 +40,7 @@ class ServersController < ApplicationController
 
   private
 
-  def server
+  def set_server
     @server = Server.find(params[:id])
   end
   
