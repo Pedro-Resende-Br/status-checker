@@ -14,12 +14,12 @@ class ServersController < ApplicationController
   end
 
   def create
-    @server = Server.new(params)
+    @server = Server.new(status: params["status"])
     if @server[:status] == "UP" || @server[:status] == "DOWN"
       @server.save
-    else
-      render :new
     end
+    index
+    render :index
   end
 
   def edit

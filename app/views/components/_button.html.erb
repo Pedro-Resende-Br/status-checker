@@ -1,3 +1,4 @@
-<%= simple_form_for @message do |f| %>
-  <%= f.button :submit, class: "btn btn-flat m-1" %>
-<% end %>
+  <%= simple_form_for server do |f| %>
+    <%= f.input :status %>
+    <%= f.button :submit, class: "btn btn-flat" %>
+  <% end %>
