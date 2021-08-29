@@ -1,0 +1,10 @@
+<div class="row m-4">
+  <% @message.each do |message| %>
+  <div>
+    <%= message.status%>
+    <%= message.text%>
+    <%= message.created_at%>
+  </div>
+  <hr>
+  <% end %>
+</div>
