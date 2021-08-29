@@ -5,6 +5,10 @@ class MessagesController < ApplicationController
     @message = Message.all.reverse[0..9]
   end
 
+  def show
+    @message = Message.find(params[:id])
+  end
+
   def new
     @message = Message.new
   end
@@ -14,6 +18,7 @@ class MessagesController < ApplicationController
     @message_info = MessageInfo.where(status: @server.status).last
     @message = Message.new(status: @server.status, text: @message_info.text)
     @message.save
+    redirect_to messages_path
   end
 
   def destroy
