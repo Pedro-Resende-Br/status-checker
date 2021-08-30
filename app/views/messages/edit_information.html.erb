@@ -1,0 +1,27 @@
+<h2>The system is:</h2>
+<%= @server.status%>
+<h3>Update the server status</h3>
+<%= form_with url: "/servers", method: :post do |f| %>
+  <%= f.radio_button  :status, "UP" %>
+  <%= f.label :status_UP, "UP" %>
+  <%= f.radio_button  :status, "DOWN" %>
+  <%= f.label :status_DOWN, "DOWN" %>
+  <%= f.submit "Update" %>
+<% end %>
+
+<h2>Message for server UP:</h2>
+<%= @up.text%>
+<h2>Message for server DOWN:</h2>
+<%= @down.text%>
+<h3>Update the messages</h3>
+<%= form_with url: "/infos", method: :post do |f| %>
+  <%= f.radio_button  :status, "UP" %>
+  <%= f.label :status_UP, "UP" %>
+  <%= f.radio_button  :status, "DOWN" %>
+  <%= f.label :status_DOWN, "DOWN" %>
+  <%= f.label :text, "New text" %>
+  <%= f.text_field :text %>
+  <%= f.submit "Update" %>
+<% end %>
+
+<%= link_to "Check the messages", messages_path, class: "btn btn-flat" %>

@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
 
   def create
     @server = Server.all.last
-    @message_info = MessageInfo.where(status: @server.status).last
+    @message_info = Info.where(status: @server.status).last
     @message = Message.new(status: @server.status, text: @message_info.text)
     @message.save
     redirect_to messages_path
@@ -23,6 +23,12 @@ class MessagesController < ApplicationController
 
   def destroy
     @message.destroy
+  end
+
+  def edit_information
+    @server = Server.all.last
+    @up = Info.where(status: "UP").last
+    @down = Info.where(status: "DOWN").last
   end
   
   private

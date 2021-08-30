@@ -19,7 +19,7 @@ class ServersController < ApplicationController
       @server.save
     end
     index
-    render :index
+    redirect_to information_path
   end
 
   def edit

@@ -1,9 +1,12 @@
 <div class="container">
   <h1>Server Status Checker</h1>
+  <h3>Status:</h3>
+  <%= Server.all.last.status %>
+  <h3>Messages:</h3>
   <%= render 'components/card-message' %>
   <div>
     <%= link_to 'Check the status', {:action => :create}, :method => :post %>
   </div>
 </div>
 
-<%= link_to "Update the Serve status", servers_path, class: "btn btn-flat" %>
+<%= link_to "Update the informations", information_path, class: "btn btn-flat" %>
