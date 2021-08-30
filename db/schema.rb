@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_08_28_152939) do
 
-  create_table "message_infos", force: :cascade do |t|
+  create_table "infos", force: :cascade do |t|
     t.string "text"
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
