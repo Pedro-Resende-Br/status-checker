@@ -1,10 +1,15 @@
-<div class="row m-4">
+<div class="card-holder">
   <% @message.each do |message| %>
-  <div>
-    <%= message.status%>
-    <%= message.text%>
-    <%= message.created_at%>
+  <div class="card">
+    <div>
+      <%= message.status%>
+    </div>
+    <div>
+      <%= message.text%>
+    </div>
+    <div>
+      <%= message.created_at%>
+    </div>
   </div>
-  <hr>
   <% end %>
 </div>

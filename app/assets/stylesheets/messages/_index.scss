@@ -1,0 +1,21 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import "button";
+
+.titles{
+  margin: 10px;
+  color: #666666;
+}
+
+.status{
+  font-size: 30px;
+  font-weight: bold;
+  color: #1e6091;
+  padding-left: 20px;
+}
+
+.app-name{
+  color: #1e6091;
+}
