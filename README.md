@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Server Status Checker
 
-Things you may want to cover:
+This programm uses:
+* ruby 2.6.6
+* rails 6.1.3
+* sqlite3 1.4
+* bootstrap 4.6
+* yanr 1.22.10
 
-* Ruby version
+To run the app it is needed to first:
 
-* System dependencies
+bundle install
 
-* Configuration
+yarn add bootstrap@4.6
 
-* Database creation
+rails db:create db:migrate db:seed
 
-* Database initialization
+After that, it is necessay to:
 
-* How to run the test suite
+rails s
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The app will be hosted in the Localhost:3000
