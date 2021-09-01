@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  root to: 'messages#index'
   resources :messages
   resources :servers, only: [:index, :new, :create]
   resources :infos, only: [:index, :new, :create, :edit, :update]
